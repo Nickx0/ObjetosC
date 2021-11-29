@@ -15,6 +15,18 @@ namespace WinFormsApp1
                 labelLado.Focus();
                 return;
             }
+            errorProvider1.SetError(labelLado, "");
+
+            double LADO;
+            if(!double.TryParse(labelLado.Text, out LADO))
+            {
+                errorProvider1.SetError(labelLado, "Debe Ingresar Numeros");
+                labelLado.Focus();
+                return;
+            }
+            //xd
+            errorProvider1.SetError(labelLado, "");
+
             float lado = float.Parse(labelLado.Text);
             float area = lado * lado;
             labelArea.Text = area.ToString("n2");
