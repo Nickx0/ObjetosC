@@ -24,7 +24,6 @@ namespace WinFormsApp1
                 labelLado.Focus();
                 return;
             }
-            //xd
             errorProvider1.SetError(labelLado, "");
 
             float lado = float.Parse(labelLado.Text);
